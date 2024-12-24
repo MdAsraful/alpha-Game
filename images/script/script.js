@@ -1,3 +1,26 @@
+
+
+function handleKeybordButtonPress(event){
+    const playerPressed = event.key;
+
+    // Get the expected to press
+
+    const currentAlphabetElement = document.getElementById('currentAlphabet');
+    const currentAlphabet=currentAlphabetElement.innerText;
+    const expectedAlphabet = currentAlphabet.toLowerCase();
+
+    // Check match or Not
+
+    if(playerPressed === expectedAlphabet){
+
+    }
+    else{
+        
+    }
+
+}
+document.addEventListener('keyup', handleKeybordButtonPress)
+
 function continueGame(){
     const alphabet = getARandomAlphabet();
   // Randomly genareted the Alphabet 
