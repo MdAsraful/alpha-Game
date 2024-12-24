@@ -12,10 +12,11 @@ function handleKeybordButtonPress(event){
     // Check match or Not
 
     if(playerPressed === expectedAlphabet){
-
+        removeBackgroundColorById(expectedAlphabet)
+        continueGame();
     }
     else{
-        
+
     }
 
 }
