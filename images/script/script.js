@@ -12,17 +12,24 @@ function handleKeybordButtonPress(event){
     // Check match or Not
 
     if(playerPressed === expectedAlphabet){
-        console.log('user pressed the right word')
-        // update Score
-        const currenScoreElement=document.getElementById('current-score');
-        const currentScoreText= currenScoreElement.innerText;
-        const currentScore=parseInt(currentScoreText);
 
-        // New Score
-        const newScore= currentScore+1;
+        const currentScore= getTextElementValueById("current-score")
+
+        const updatedScore=currentScore + 1;
+
+        setElementValueById('current-score', updatedScore)
+
+        // console.log('user pressed the right word')
+        // // update Score
+        // const currenScoreElement=document.getElementById('current-score');
+        // const currentScoreText= currenScoreElement.innerText;
+        // const currentScore=parseInt(currentScoreText);
+
+        // // New Score
+        // const newScore= currentScore+1;
         
-        // Show Updated score
-        currenScoreElement.innerText=newScore; 
+        // // Show Updated score
+        // currenScoreElement.innerText=newScore; 
 
 
 
@@ -30,6 +37,21 @@ function handleKeybordButtonPress(event){
         continueGame();
     }
     else{
+        const currentLife= getTextElementValueById("current-Life")
+
+        const updatedLife=currentLife - 1;
+
+        setElementValueById('current-Life', updatedLife)
+
+
+
+
+        // current life number
+        // const currentLifeElement=document.getElementById('current-Life-Count');
+        // const currentLifeText=currentLifeElement.innerText;
+        // const currentLife=currentLifeText-1;
+
+        // currentLifeElement.innerText=currentLife 
 
     }
 
