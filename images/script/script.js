@@ -12,6 +12,20 @@ function handleKeybordButtonPress(event){
     // Check match or Not
 
     if(playerPressed === expectedAlphabet){
+        console.log('user pressed the right word')
+        // update Score
+        const currenScoreElement=document.getElementById('current-score');
+        const currentScoreText= currenScoreElement.innerText;
+        const currentScore=parseInt(currentScoreText);
+
+        // New Score
+        const newScore= currentScore+1;
+        
+        // Show Updated score
+        currenScoreElement.innerText=newScore; 
+
+
+
         removeBackgroundColorById(expectedAlphabet)
         continueGame();
     }
