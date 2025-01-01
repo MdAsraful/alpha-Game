@@ -42,7 +42,9 @@ function handleKeybordButtonPress(event){
         const updatedLife=currentLife - 1;
 
         setElementValueById('current-Life', updatedLife)
-
+        if(updatedLife===0){
+            gameOver()
+        }
 
 
 
@@ -71,7 +73,20 @@ function continueGame(){
 
 
 function Play(){
-    hideElementById('startGame')
-    showElement('playGround')
-    continueGame()
+    // Hide Everything
+    hideElementById('startGame');
+    hideElementById('game-over');
+    showElement('playGround');
+    // Set Value
+    setElementValueById('current-Life', 5);
+    setElementValueById('current-score', 0);
+
+    continueGame();
+}
+
+function gameOver(){
+    hideElementById('playGround');
+    showElement('game-over');
+    
+
 }
